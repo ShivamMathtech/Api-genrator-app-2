@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Dash App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid main-page p-0 d-flex">
+      <div class="row m-0 p-0 w-100">
+        <div class="col-2 sidebar">
+          <h5 class="text-center p-4 text-white">WEB-STORE</h5>
+          <div
+            class="side-bar d-flex justify-content-center align-items-center"
+          >
+            <ul class="nav flex-column w-75 text-center">
+              <li class="nav-item active">
+                
+                <a class="nav-link  aria-current="page" href="#"><i class="fa-solid fa-house float-start m-1"></i>HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#example"><i class="fa-solid fa-list float-start m-1"></i>EXAPLES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-vials float-start m-1"></i>TEST API</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-user float-start m-1"></i>ACCOUNT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-gear float-start m-1"></i>SETTINGS</a>
+              </li>
+            </ul>
+          </div>
+          <div class="log-out d-flex justify-content-center align-self-baseline">
+            <ul class="nav flex-column text-center w-75">
+                 <li class="nav-item text-white text-center">
+                    <a href="https://github.com/ShivamMathtech" class="nav-link"><i class="fa-solid fa-info float-start m-1"></i>MORE-INFO</a>
+                 </li>
+                 <li class="nav-item text-white text-center">
+                    <a href="https://github.com/ShivamMathtech" class="nav-link"><i class="fa-solid fa-envelope float-start m-1"></i>CONTACT</a>
+                 </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-10 p-0">
+           <section>
+            <div class="content-area">
+                <div class="row m-0 p-4 bg-light">
+                    <div class="col-5">
+                        <div class="input-group mb-3 ">
+                          <input type="text" class="form-control p-2" placeholder="Search Required API" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="vertiacl-navigation d-flex justify-content-end">
+                            <ul class="nav">
+                                <button class="btn btn-outline-dark p-2">Sign-in</button>
+                                <button class="btn btn-outline-dark ms-2">Sign-up</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-1 m-0">
+                    <div class="col-12">
+                        <h5>Categories</h5>
+                    </div>
+                </div>
+                <div class="row m-0 p-2">
+                    <div class="col-4">
+                        <div class="card c1">
+                            <h4>All Products</h4>
+                               <h3><span id="element2"></span></h3>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card c1">
+                            <h4>All API </h4>
+                            <h3><span id="element"></span></h3>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card c1">
+                            <h4>EXAPLES</h4>
+                            <p>
+An example of an API is Google Maps API, which allows developers to integrate maps, directions, and location data into their own apps or websites.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0 p-2">
+                    <div class="col-4">
+                        <div class="card w-100 c2">
+                            <div class="card-img-top d-flex justify-content-center">
+                                <img src="img/foodapiimg.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4>Burger API</h4>
+                                <p>Here Are fake Api of the burger you can easly with live preview</p>
+                                <button class="btn btn-outline-primary" onclick="generateFakeAPI()">Genrate API</button>
+                                <button class="btn btn-outline-primary" id="downloadBtnburger" onclick="downloadFakeAPI()">Download file</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card w-100 c2">
+                            <div class="card-img-top d-flex justify-content-center">
+                                <img src="img//dress.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4>Dress API</h4>
+                                <p>Here Are fake Api of the Dress you can easly with live preview</p>
+                                <button class="btn btn-outline-primary" onclick="generateFakeAPI()">Genrate API</button>
+                                <button class="btn btn-outline-primary" id="downloadBtndress" onclick="downloadFakeAPI()">Download file</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card w-100 c2">
+                            <div class="card-img-top d-flex justify-content-center">
+                                <img src="img/bagpack.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4>Bagpack API</h4>
+                                <p>Here Are fake Api of the Bagpack you can easly with live preview</p>
+                                <button class="btn btn-outline-primary" onclick="generateFakeAPI()">Genrate API</button>
+                                <button class="btn btn-outline-primary" id="downloadBtn" onclick="downloadFakeAPI()">Download file</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0 p-2">
+                    <div class="col-12">
+                        <div class="card" id="jsonDisplay" style="display: none;"></div>
+                    </div>
+                </div>
+              
+                    <div class="row m-0 p-2">
+                    <div class="col-4">
+                        <div class="card w-100 c2">
+                            <div class="card-img-top d-flex justify-content-center">
+                                <img src="img/student.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4>Student API</h4>
+                                <p>Here Are fake Api of the Student you can easly with live preview</p>
+                                <button class="btn btn-outline-primary" onclick="generateFakeAPI()">Genrate API</button>
+                                <button class="btn btn-outline-primary" id="downloadBtnburger" onclick="downloadFakeAPI()">Download file</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card w-100 c2">
+                            <div class="card-img-top d-flex justify-content-center">
+                                <img src="img/bike.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4>Bike API</h4>
+                                <p>Here Are fake Api of the Bike you can easly with live preview</p>
+                                <button class="btn btn-outline-primary" onclick="generateFakeAPI()">Genrate API</button>
+                                <button class="btn btn-outline-primary" id="downloadBtndress" onclick="downloadFakeAPI()">Download file</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card w-100 c2">
+                            <div class="card-img-top d-flex justify-content-center">
+                                <img src="img/car.png" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4>Car API</h4>
+                                <p>Here Are fake Api of the Car you can easly with live preview</p>
+                                <button class="btn btn-outline-primary" onclick="generateFakeAPI()">Genrate API</button>
+                                <button class="btn btn-outline-primary" id="downloadBtn" onclick="downloadFakeAPI()">Download file</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <section id="">
+
+            </section>
+            </section>
+        </div>
+          </div>
+      </div>
+    </div>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
